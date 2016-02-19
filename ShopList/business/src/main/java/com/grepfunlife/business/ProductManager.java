@@ -1,3 +1,7 @@
+package com.grepfunlife.business;
+
+import com.grepfunlife.entity.Product;
+
 /**
  * Created by love_polyanskaya on 05.02.16.
  */

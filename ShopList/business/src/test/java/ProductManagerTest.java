@@ -1,5 +1,6 @@
 import junit.framework.TestCase;
 import org.junit.Test;
+import com.grepfunlife.business.ProductManager;
 
 /**
  * Created by love_polyanskaya on 06.02.16.
