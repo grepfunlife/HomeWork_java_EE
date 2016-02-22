@@ -1,4 +1,5 @@
-package com.grepfunlife.entity; /**
+package com.grepfunlife.entity;
+/**
  * Created by love_polyanskaya on 05.02.16.
  */
 
@@ -49,7 +50,7 @@ public class Product implements  Serializable {
         return inList;
     }
 
-    public void setInList(boolean inList) {
+    public void setInList() {
         this.inList = inList;
     }
 

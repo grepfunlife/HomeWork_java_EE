@@ -2,10 +2,9 @@ package com.grepfunlife.dao;
 
 import com.grepfunlife.entity.Category;
 import com.grepfunlife.entity.Product;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by love_polyanskaya on 19.02.16.
@@ -19,16 +18,29 @@ public class BasicDAOTest {
     }
 
     @Test
-    public void testAdd() {
+    public void testCRUD() {
         BasicDAO dao = new BasicDAO();
 
         Category ct = new Category();
-        ct.setCategoryName("Sweet things");
+        ct.setCategoryName("Dairy Products");
         dao.addEntity(ct);
 
         Product pt = new Product();
-        pt.setProductName("Candy");
+        pt.setProductName("Milk");
         pt.setCategoryName(ct);
+        pt.setComment("3,5%");
+        pt.setInList();
         dao.addEntity(pt);
+
+        pt.setComment("1,2%");
+        dao.updateEntity(pt);
+
+        Product pt1 = (Product) dao.getEntity(Product.class, pt.getProductId());
+
+//        dao.deleteEntity(pt);
+//        dao.deleteEntity(ct);
+
+
+
     }
 }

@@ -20,7 +20,7 @@ public class Category implements Serializable {
     private long categoryId;
     @Column(name = "categoryname")
     private String categoryName;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "category")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "categoryName")
     private List<Product> products;
 
     public Category() {

@@ -25,8 +25,14 @@
         <module name="business" />
         <module name="business (1)" />
         <module name="common-types" />
-        <module name="dao" />
         <module name="web-app" />
+      </profile>
+      <profile default="false" name="Annotation profile for dao" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,7 +40,7 @@
       <module name="business (1)" target="1.5" />
       <module name="business (2)" target="1.5" />
       <module name="common-types" target="1.5" />
-      <module name="dao" target="1.5" />
+      <module name="dao" target="1.7" />
       <module name="ShopList" target="1.5" />
       <module name="web-app" target="1.5" />
     </bytecodeTargetLevel>
